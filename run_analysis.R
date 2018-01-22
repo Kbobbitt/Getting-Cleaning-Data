@@ -45,7 +45,7 @@ lastcolumn <- ncol(mean_std_data)
 attach(mean_std_data)
 averages_list <- aggregate(mean_std_data[,3:lastcolumn], by=list(Activity, Subject), FUN=mean)
 
-write.csv(averages_list, file = "./tidy_data_set.txt", row.names = FALSE)
+write.table(averages_list, file = "./tidy_data_set.txt", row.names = FALSE)
 
 
                          
